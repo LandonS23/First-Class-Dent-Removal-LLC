@@ -1,0 +1,14 @@
+.about-view {
+  padding-top: 58.45px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media (max-width: 767px) {
+  .about-view {
+    padding-top: 0;
+    height: calc(100vh - 52px);
+  }
+}

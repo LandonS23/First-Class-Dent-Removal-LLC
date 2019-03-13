@@ -15,16 +15,21 @@ import './App.css';
 import Home from './components/home/Home';
 import logo from './resources/Logo.svg';
 
+import About from './components/about/About';
+
 class App extends Component {
-  state = { visible: false, activeItem: 'home' }
+  state = { visible: false, activeItem: window.location.pathname.substring(1) }
 
   handleButtonClick = () => this.setState({ visible: !this.state.visible })
 
   handleSidebarHide = () => this.setState({ visible: false })
   
   handleItemClick = (e, name) => {
-    e.preventDefault();
-    this.setState({ activeItem: name });
+    if(name !== this.state.activeItem) {
+      this.setState({ activeItem: name });
+    } else {
+      e.preventDefault();
+    }
   }
 
   render() {
@@ -44,8 +49,14 @@ class App extends Component {
                 </Link>
                 
                 <Link to="/" className="home-link" onClick={e => this.handleItemClick(e, "home")}>
-                  <Menu.Item className="link" header active={activeItem === 'home'}>
+                  <Menu.Item className="link" active={activeItem === '' || activeItem === 'home'}>
                       Home
+                  </Menu.Item>
+                </Link>
+                
+                <Link to="/about" onClick={e => this.handleItemClick(e, "about")}>
+                  <Menu.Item className="link" active={activeItem === 'about'}>
+                    About
                   </Menu.Item>
                 </Link>
 
@@ -58,6 +69,7 @@ class App extends Component {
             {/* Router */}
             <Switch>
               <Route exact path="/" component={Home} />
+              <Route path="/about" component={About} />
               <Route component={Home} />
             </Switch>
           </div>
