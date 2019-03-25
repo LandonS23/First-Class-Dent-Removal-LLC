@@ -23,7 +23,7 @@ class App extends Component {
   handleButtonClick = () => this.setState({ visible: !this.state.visible })
 
   handleSidebarHide = () => this.setState({ visible: false })
-  
+
   handleItemClick = (e, name) => {
     if(name !== this.state.activeItem) {
       this.setState({ activeItem: name });
@@ -47,16 +47,34 @@ class App extends Component {
                       <Image size='mini' src={logo} className="logo" />
                   </Menu.Item>
                 </Link>
-                
+
                 <Link to="/" className="home-link" onClick={e => this.handleItemClick(e, "home")}>
                   <Menu.Item className="link" active={activeItem === '' || activeItem === 'home'}>
-                      Home
+                    Home
                   </Menu.Item>
                 </Link>
-                
+
                 <Link to="/about" onClick={e => this.handleItemClick(e, "about")}>
                   <Menu.Item className="link" active={activeItem === 'about'}>
                     About
+                  </Menu.Item>
+                </Link>
+
+                <Link to="/about" onClick={e => this.handleItemClick(e, "services")}>
+                  <Menu.Item className="link" active={activeItem === 'services'}>
+                    Services
+                  </Menu.Item>
+                </Link>
+
+                <Link to="/about" onClick={e => this.handleItemClick(e, "gallery")}>
+                  <Menu.Item className="link" active={activeItem === 'gallery'}>
+                    Gallery
+                  </Menu.Item>
+                </Link>
+
+                <Link to="/about" onClick={e => this.handleItemClick(e, "faq")}>
+                  <Menu.Item className="link" active={activeItem === 'faq'}>
+                    FAQ
                   </Menu.Item>
                 </Link>
 

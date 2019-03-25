@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
 import {
   Container,
-  Header
+  Header,
+  Icon
 } from 'semantic-ui-react';
 
 import './Home.css';
@@ -11,9 +13,19 @@ class Home extends Component {
     return (
       <div>
         <Container text className="body-container">
-          <h3>Paintless Dent Removal</h3>
-          <Header as='h1' className="white">First Class Dent Removal, LLC</Header>
-          <p className="mission">"We Treat Your Vehicle Like First Class"</p>
+          <div className="header-text">
+            <Header as='h1' className="white">First Class Dent Removal, LLC</Header>
+            <p className="mission">Paintless Dent Removal</p>
+          </div>
+
+          <p className="quote">"We Treat Your Vehicle Like First Class"</p>
+
+          <div className="quick-links">
+            <Link to="/about" className="quick-link"><Icon name='car' size='big'/>Free Quote</Link>
+            <Link to="/about" className="quick-link"><Icon name='camera' size='big'/>Gallery</Link>
+            <Link to="/about" className="quick-link"><Icon name='info circle' size='big'/>About Us</Link>
+            <Link to="/about" className="quick-link"><Icon name='question' size='big'/>FAQ</Link>
+          </div>
         </Container>
       </div>
     );

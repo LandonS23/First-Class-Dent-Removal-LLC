@@ -1,43 +1,77 @@
+@font-face {
+  font-family: 'Audiowide';
+  src: url('../../resources/Audiowide-Regular.ttf');
+}
+
 .ui.header.white {
   color: white;
   text-align: center;
-  margin: 0 0 40px;
-  font-size: 60px;
-  line-height: 70px;
+  margin: 0;
+  font-size: 40px;
+  font-family: 'Audiowide', Fallback, helvetica;
+  text-transform: uppercase;
 }
 
 .ui.text.container.body-container {
     max-width: 100% !important;
+    width: 100%;
+    margin: 0;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5) ), url('../../resources/car-wallpaper.jpg') no-repeat 0 0;
+    background-position: 0 58.45px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    justify-content: space-between;
 }
 
 .body-container h3 {
   font-size: 14px;
-  margin-bottom: 0;
+  margin: 0;
   text-align: center;
   font-style: italic;
-}
-
-.body-container div.info {
-  font-size: 18px;
-  max-width: 700px;
-  display: flex;
-  align-items: baseline;
-}
-
-.body-container div span {
-  font-size: 42px;
-  font-weight: bold;
-  color: #32CD32;
-  margin-right: 10px;
 }
 
 .body-container p.mission {
   font-size: 24px;
   max-width: 630px;
-  margin-bottom: 100px;
+  margin: 0;
+}
+
+.body-container p.quote {
+  font-size: 32px;
+  font-style: italic;
+  margin: 0;
+}
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.quick-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 800px;
+}
+
+.quick-link {
+  width: 120px;
+  font-size: 24px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.quick-link:hover {
+  color: #2185d0;
 }
 
 @media (max-width: 767px) {

@@ -7,7 +7,7 @@ class About extends Component {
   render() {
     return (
       <div className="about-view">
-        This is the about us page
+        We are a mobile company who offers paintless dent removal. Our services range from hail damage, door dings, and other minor dents. Call today for a quote!
       </div>
     );
   }
