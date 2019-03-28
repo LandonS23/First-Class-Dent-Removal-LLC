@@ -21,10 +21,18 @@ class Home extends Component {
           <p className="quote">"We Treat Your Vehicle Like First Class"</p>
 
           <div className="quick-links">
-            <Link to="/about" className="quick-link"><Icon name='car' size='big'/>Free Quote</Link>
-            <Link to="/about" className="quick-link"><Icon name='camera' size='big'/>Gallery</Link>
-            <Link to="/about" className="quick-link"><Icon name='info circle' size='big'/>About Us</Link>
-            <Link to="/about" className="quick-link"><Icon name='question' size='big'/>FAQ</Link>
+            <Link to="/about" className="quick-link" onClick={e => this.props.handleItemClick(e, "about")}>
+              <Icon name='car' size='big'/>Free Quote
+            </Link>
+            <Link to="/about" className="quick-link" onClick={e => this.props.handleItemClick(e, "about")}>
+              <Icon name='camera' size='big'/>Gallery
+            </Link>
+            <Link to="/about" className="quick-link" onClick={e => this.props.handleItemClick(e, "about")}>
+              <Icon name='info circle' size='big'/>About Us
+            </Link>
+            <Link to="/about" className="quick-link" onClick={e => this.props.handleItemClick(e, "about")}>
+              <Icon name='question' size='big'/>FAQ
+            </Link>
           </div>
         </Container>
       </div>

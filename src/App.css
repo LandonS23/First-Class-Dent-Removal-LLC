@@ -16,7 +16,7 @@ body {
 }
 
 .ui.inverted.menu .item {
-  color: #231f20;
+  color: #111;
   font-size: 16px;
 }
 
@@ -31,9 +31,9 @@ body {
 }
 
 .ui.button.contact-button {
-  color: #231f20;
+  color: #111;
   background-color: #f9fbfb;
-  border: 1px solid #231f20;
+  border: 1px solid #111;
 }
 
 .ui.button.contact-button:hover {
@@ -126,7 +126,7 @@ body {
   }
 
   .home-link {
-    color: #231f20;
+    color: #111;
     font-size: 14px;
     font-weight: 700;
   }

@@ -33,7 +33,7 @@ class App extends Component {
   }
 
   render() {
-    const { visible, activeItem } = this.state
+    const { visible, activeItem } = this.state;
 
     return (
       <Router>
@@ -86,9 +86,9 @@ class App extends Component {
 
             {/* Router */}
             <Switch>
-              <Route exact path="/" component={Home} />
+              <Route exact path="/" render={()=><Home handleItemClick={this.handleItemClick}/>} />
               <Route path="/about" component={About} />
-              <Route component={Home} />
+              <Route render={()=><Home handleItemClick={this.handleItemClick}/>} />
             </Switch>
           </div>
 
@@ -123,8 +123,9 @@ class App extends Component {
                 <Segment basic>
                   {/* Router */}
                   <Switch>
-                    <Route exact path="/" component={Home} />
-                    <Route component={Home} />
+                    <Route exact path="/" render={()=><Home handleItemClick={this.handleItemClick}/>} />
+                    <Route path="/about" component={About} />
+                    <Route render={()=><Home handleItemClick={this.handleItemClick}/>} />
                   </Switch>
                 </Segment>
               </Sidebar.Pusher>

@@ -6,6 +6,46 @@
   flex-direction: column;
 }
 
+.about-view .ui.text.container.body-container {
+  background: #111;
+  padding: 2em 5%;
+  height: 100%;
+  justify-content: normal;
+}
+
+.body-container p.about-sub {
+  font-size: 26px;
+  font-family: 'Lato';
+  margin: 0;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.body-container p.about-detail {
+  font-size: 16px;
+  font-family: 'Lato';
+  font-weight: 300;
+  font-style: normal;
+  margin: 0;
+}
+
+.about-container {
+  display: flex;
+  padding-top: 30px;
+}
+
+.about-container-col {
+  height: 100%;
+  width: 50%;
+}
+
+.about-image {
+  background: url('../../resources/LogoWhite.svg') no-repeat 0 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
 @media (max-width: 767px) {
   .about-view {
     padding-top: 0;
