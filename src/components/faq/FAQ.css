@@ -1,0 +1,55 @@
+.faq-view {
+  padding-top: 58.45px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.faq-view .ui.text.container.body-container {
+  background: #111;
+  padding: 2em 5% 0;
+  height: 100%;
+  justify-content: normal;
+  background: linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5) ), url('../../resources/car-wallpaper2.jpg') no-repeat 0 0;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.body-container p.faq-sub {
+  font-size: 26px;
+  font-family: 'Lato';
+  margin: 0;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.body-container p.faq-question {
+  font-size: 26px;
+  font-family: 'Lato';
+  margin-bottom: 0;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.faq-link {
+  color: #2185d0 !important;
+}
+
+.faq-link:hover {
+    color: #1e70bf !important;
+}
+
+.body-container p.faq-answer {
+  font-size: 16px;
+  font-family: 'Lato';
+  width: 75%;
+}
+
+@media (max-width: 767px) {
+  .faq-view {
+    padding-top: 0;
+    height: calc(100vh - 52px);
+  }
+}

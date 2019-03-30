@@ -30,7 +30,7 @@ class Home extends Component {
             <Link to="/about" className="quick-link" onClick={e => this.props.handleItemClick(e, "about")}>
               <Icon name='info circle' size='big'/>About Us
             </Link>
-            <Link to="/about" className="quick-link" onClick={e => this.props.handleItemClick(e, "about")}>
+            <Link to="/faq" className="quick-link" onClick={e => this.props.handleItemClick(e, "about")}>
               <Icon name='question' size='big'/>FAQ
             </Link>
           </div>

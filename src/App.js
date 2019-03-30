@@ -16,6 +16,7 @@ import Home from './components/home/Home';
 import logo from './resources/Logo.svg';
 
 import About from './components/about/About';
+import FAQ from './components/faq/FAQ';
 
 class App extends Component {
   state = { visible: false, activeItem: window.location.pathname.substring(1) }
@@ -60,23 +61,23 @@ class App extends Component {
                   </Menu.Item>
                 </Link>
 
-                <Link to="/about" onClick={e => this.handleItemClick(e, "services")}>
-                  <Menu.Item className="link" active={activeItem === 'services'}>
-                    Services
-                  </Menu.Item>
-                </Link>
-
                 <Link to="/about" onClick={e => this.handleItemClick(e, "gallery")}>
                   <Menu.Item className="link" active={activeItem === 'gallery'}>
                     Gallery
                   </Menu.Item>
                 </Link>
 
-                <Link to="/about" onClick={e => this.handleItemClick(e, "faq")}>
+                <Link to="/faq" onClick={e => this.handleItemClick(e, "faq")}>
                   <Menu.Item className="link" active={activeItem === 'faq'}>
                     FAQ
                   </Menu.Item>
                 </Link>
+
+                <a href="https://www.facebook.com/pg/firstclassdentremovalllc/reviews/?ref=page_internal" target="_blank" rel="noopener noreferrer">
+                  <Menu.Item className="link">
+                      Testimonials
+                  </Menu.Item>
+                </a>
 
                 <Menu.Item position='right' className="right-menu">
                   <a href="mailto:firstclassdentremoval@gmail.com"><Button className="contact-button">Contact Us</Button></a>
@@ -88,6 +89,7 @@ class App extends Component {
             <Switch>
               <Route exact path="/" render={()=><Home handleItemClick={this.handleItemClick}/>} />
               <Route path="/about" component={About} />
+              <Route path="/faq" component={FAQ} handleItemClick={this.handleItemClick}/>} />
               <Route render={()=><Home handleItemClick={this.handleItemClick}/>} />
             </Switch>
           </div>
