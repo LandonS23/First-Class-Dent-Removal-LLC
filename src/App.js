@@ -16,7 +16,9 @@ import Home from './components/home/Home';
 import logo from './resources/Logo.svg';
 
 import About from './components/about/About';
+import Gallery from './components/gallery/Gallery';
 import FAQ from './components/faq/FAQ';
+import Contact from './components/contact/Contact';
 
 class App extends Component {
   state = { visible: false, activeItem: window.location.pathname.substring(1) }
@@ -61,7 +63,7 @@ class App extends Component {
                   </Menu.Item>
                 </Link>
 
-                <Link to="/about" onClick={e => this.handleItemClick(e, "gallery")}>
+                <Link to="/gallery" onClick={e => this.handleItemClick(e, "gallery")}>
                   <Menu.Item className="link" active={activeItem === 'gallery'}>
                     Gallery
                   </Menu.Item>
@@ -79,8 +81,10 @@ class App extends Component {
                   </Menu.Item>
                 </a>
 
-                <Menu.Item position='right' className="right-menu">
-                  <a href="mailto:firstclassdentremoval@gmail.com"><Button className="contact-button">Contact Us</Button></a>
+                <Menu.Item position='right' className="right-menu" active={activeItem === 'contact'}>
+                  <Link to="/contact" onClick={e => this.handleItemClick(e, "contact")}>
+                    <Button className="contact-button">Contact Us</Button>
+                  </Link>
                 </Menu.Item>
               </Container>
             </Menu>
@@ -89,7 +93,9 @@ class App extends Component {
             <Switch>
               <Route exact path="/" render={()=><Home handleItemClick={this.handleItemClick}/>} />
               <Route path="/about" component={About} />
+              <Route path="/gallery" component={Gallery} handleItemClick={this.handleItemClick}/>} />
               <Route path="/faq" component={FAQ} handleItemClick={this.handleItemClick}/>} />
+              <Route path="/contact" component={Contact} />
               <Route render={()=><Home handleItemClick={this.handleItemClick}/>} />
             </Switch>
           </div>
@@ -110,7 +116,6 @@ class App extends Component {
                 as={Menu}
                 animation='overlay'
                 icon='labeled'
-                inverted
                 onHide={this.handleSidebarHide}
                 vertical
                 visible={visible}
@@ -127,6 +132,9 @@ class App extends Component {
                   <Switch>
                     <Route exact path="/" render={()=><Home handleItemClick={this.handleItemClick}/>} />
                     <Route path="/about" component={About} />
+                    <Route path="/gallery" component={Gallery} handleItemClick={this.handleItemClick}/>} />
+                    <Route path="/faq" component={FAQ} handleItemClick={this.handleItemClick}/>} />
+                    <Route path="/contact" component={Contact} />
                     <Route render={()=><Home handleItemClick={this.handleItemClick}/>} />
                   </Switch>
                 </Segment>

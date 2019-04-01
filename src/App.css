@@ -36,8 +36,8 @@ body {
   border: 1px solid #111;
 }
 
-.ui.button.contact-button:hover {
-  color: #2185d0;
+.active.item .ui.button.contact-button, .ui.button.contact-button:hover, .ui.button.contact-button:focus {
+  color: #2185d0 !important;
   border-color: #2185d0;
 }
 

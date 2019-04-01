@@ -26,7 +26,7 @@ class FAQ extends Component {
             <p className="faq-answer">
               Damage caused by hail stones, door dings, shopping carts, golf balls, and many other kinds of minor dents as long as the paint is not damaged.
               If you are not sure if PDR is the right option for repairing your car, please&nbsp;&nbsp;
-              <Link to="/about" className="faq-link" onClick={e => this.props.handleItemClick(e, "about")}>
+              <Link to="/contact" className="faq-link" onClick={e => this.props.handleItemClick(e, "contact")}>
                 Contact Us
               </Link>
               &nbsp;&nbsp;for a free quote!
