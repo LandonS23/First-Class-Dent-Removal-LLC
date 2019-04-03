@@ -12,11 +12,13 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <Container text className="body-container">
+        <Container text className="body-container home-container">
           <div className="header-text">
             <Header as='h1' className="white">First Class Dent Removal, LLC</Header>
             <p className="mission">Paintless Dent Removal</p>
           </div>
+
+          <div className="home-image-mobile" />
 
           <p className="quote">"We Treat Your Vehicle Like First Class"</p>
 

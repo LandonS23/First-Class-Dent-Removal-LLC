@@ -13,6 +13,8 @@ class Contact extends Component {
     return (
       <div className="contact-view">
         <Container text className="body-container">
+          <div className="contact-image-mobile" />
+
           <div className="header-text">
             <Header as='h1' className="white">Contact Us</Header>
             <p className="contact-sub">Zach Mullen</p>

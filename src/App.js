@@ -23,9 +23,9 @@ import Contact from './components/contact/Contact';
 class App extends Component {
   state = { visible: false, activeItem: window.location.pathname.substring(1) }
 
-  handleButtonClick = () => this.setState({ visible: !this.state.visible })
+  handleButtonClick = () => this.setState({ visible: !this.state.visible });
 
-  handleSidebarHide = () => this.setState({ visible: false })
+  handleSidebarHide = () => this.setState({ visible: false });
 
   handleItemClick = (e, name) => {
     if(name !== this.state.activeItem) {
@@ -103,8 +103,8 @@ class App extends Component {
           {/* Menu mobile */}
           <div className="menu-mobile">
             <div className="menu-bar">
-              <Icon name='sidebar' onClick={this.handleButtonClick} />
-              <Link to="/" className="home-link">
+              <Icon name='sidebar' disabled={visible} onClick={this.handleButtonClick} />
+              <Link to="/" onClick={(e) => { this.handleSidebarHide(); this.handleItemClick(e, "home"); }} className="home-link">
                 <Image size='mini' src={logo} className="logo" />
                 <span>First Class Dent Removal, LLC</span>
               </Link>
@@ -122,8 +122,42 @@ class App extends Component {
                 width='thin'
               >
 
-                <Link to="/" onClick={this.handleSidebarHide}><Menu.Item className="link"><Icon name='home'/>Home</Menu.Item></Link>
-                <a href="mailto:firstclassdentremoval@gmail.com"><Menu.Item className="link"><Icon name='envelope outline'/>Contact</Menu.Item></a>
+                <Link to="/" onClick={(e) => { this.handleSidebarHide(); this.handleItemClick(e, "home"); }}>
+                  <Menu.Item className="link" active={activeItem === '' || activeItem === 'home'}>
+                    <Icon name='home'/>
+                    Home
+                  </Menu.Item>
+                </Link>
+                <Link to="/about" onClick={(e) => { this.handleSidebarHide(); this.handleItemClick(e, "about"); }}>
+                  <Menu.Item className="link" active={activeItem === 'about'}>
+                    <Icon name='info'/>
+                    About
+                  </Menu.Item>
+                </Link>
+                <Link to="/contact" onClick={(e) => { this.handleSidebarHide(); this.handleItemClick(e, "contact"); }}>
+                  <Menu.Item className="link" active={activeItem === 'contact'}>
+                    <Icon name='mail'/>
+                    Contact
+                  </Menu.Item>
+                </Link>
+                <Link to="/gallery" onClick={(e) => { this.handleSidebarHide(); this.handleItemClick(e, "gallery"); }}>
+                  <Menu.Item className="link" active={activeItem === 'gallery'}>
+                    <Icon name='camera'/>
+                    Gallery
+                  </Menu.Item>
+                </Link>
+                <Link to="/faq" onClick={(e) => { this.handleSidebarHide(); this.handleItemClick(e, "faq"); }}>
+                  <Menu.Item className="link" active={activeItem === 'faq'}>
+                    <Icon name='question'/>
+                    FAQ
+                  </Menu.Item>
+                </Link>
+                <a href="https://www.facebook.com/pg/firstclassdentremovalllc/reviews/?ref=page_internal" target="_blank" rel="noopener noreferrer">
+                  <Menu.Item className="link">
+                    <Icon name='pencil'/>
+                    Testimonials
+                  </Menu.Item>
+                </a>
               </Sidebar>
 
               <Sidebar.Pusher dimmed={visible}>

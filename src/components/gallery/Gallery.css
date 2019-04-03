@@ -22,7 +22,7 @@
   background: linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5) ), url('../../resources/car-wallpaper3.jpg') no-repeat 0 0;
   background-position: 0 0;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   overflow: scroll;
 }
 
@@ -42,5 +42,18 @@
   .gallery-view {
     padding-top: 0;
     height: calc(100vh - 52px);
+  }
+
+  .gallery-view .ui.text.container.body-container {
+    padding: 30px;
+    background-position: 40%;
+  }
+
+  .gallery-view .header-text {
+    padding-top: 0;
+  }
+
+  .gallery-view .ui.medium.images .image, .gallery-view .ui.medium.images img {
+    width: auto;
   }
 }

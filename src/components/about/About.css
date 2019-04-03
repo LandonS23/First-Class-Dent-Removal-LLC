@@ -13,7 +13,8 @@
   background: linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5) ), url('../../resources/car-wallpaper3.jpg') no-repeat 0 0;
   background-position: 0 0;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
+  width: 100% !important;
 }
 
 .body-container p.about-sub {
@@ -47,11 +48,40 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  border-radius: 2px;
 }
 
 @media (max-width: 767px) {
+  .about-view .ui.text.container.body-container {
+    padding: 30px;
+    overflow: auto;
+    background-position: 40%;
+  }
+
   .about-view {
     padding-top: 0;
     height: calc(100vh - 52px);
+  }
+
+  .about-container {
+    padding-top: 0;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .about-container-col {
+    margin: 5px 0;
+    flex: 1 0 51%;
+    height: auto;
+  }
+
+  .about-image {
+    height: 225px;
+    background-size: cover;
+  }
+
+  .body-container p.about-detail {
+    margin: 10px;
+    font-size: 14px;
   }
 }

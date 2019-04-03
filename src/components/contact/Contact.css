@@ -10,10 +10,11 @@
   padding: 2em 5%;
   height: 100%;
   justify-content: normal;
-  background: linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5) ), url('../../resources/car-wallpaper4.jpg') no-repeat 0 0;
+  background: linear-gradient( rgba(0,0,0,.65), rgba(0,0,0,.65) ), url('../../resources/car-wallpaper4.jpg') no-repeat 0 0;
   background-position: 0 0;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
+  width: 100% !important;
 }
 
 .body-container p.contact-sub {
@@ -48,7 +49,7 @@
   padding: 10px 0;
 }
 
-.contact-container-col .item .content {
+.contact-container-col .item .content a {
   color: #2185d0 !important;
 }
 
@@ -60,9 +61,63 @@
   font-size: 1.5em;
 }
 
+.contact-image-mobile {
+  display: none;
+}
+
 @media (max-width: 767px) {
   .contact-view {
     padding-top: 0;
     height: calc(100vh - 52px);
+  }
+
+  .contact-view .ui.text.container.body-container {
+    padding: 30px;
+    background-position: 40%;
+  }
+
+  .contact-container {
+    padding-top: 0;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .ui.header.white {
+    font-size: 26px;
+  }
+
+  .header-text {
+    width: 100%;
+  }
+
+  .body-container p.contact-sub {
+    align-self: flex-start;
+    margin-top: 10px;
+  }
+
+  .contact-container-col {
+    margin: 5px 0;
+    flex: 1 0 51%;
+    height: auto;
+  }
+
+  .contact-image {
+    display: none;
+  }
+
+  .contact-image-mobile {
+    display: block;
+    background: url('../../resources/LogoWhite.svg') no-repeat 0 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 90px;
+    width: 100%;
+  }
+
+  .contact-container-col .item {
+    font-size: 18px;
+    padding: 0;
+    margin-left: 0;
   }
 }

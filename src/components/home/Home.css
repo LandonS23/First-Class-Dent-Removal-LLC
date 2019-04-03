@@ -23,7 +23,7 @@
     background: linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5) ), url('../../resources/car-wallpaper.jpg') no-repeat 0 0;
     background-position: 0 0;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     justify-content: space-between;
 }
 
@@ -57,11 +57,11 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  width: 800px;
+  width: 80%;
 }
 
 .quick-link {
-  width: 120px;
+  width: 20%;
   font-size: 24px;
   color: white;
   display: flex;
@@ -74,28 +74,27 @@
   color: #2185d0;
 }
 
+.home-image-mobile {
+  display: none;
+}
+
 @media (max-width: 767px) {
-    .ui.container.body-container {
-      padding-top: 15px;
-      height: calc(100vh - 52px);
+    .ui.text.container.body-container {
+      padding: 30px;
+      justify-content: flex-start;
+      height: calc(100vh - 50px) !important;
       margin: 0 !important;
+      background: linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5) ), url('../../resources/car-wallpaper-mobile.jpg') no-repeat 0 0;
+      background-position: 0 -100px;
     }
 
-    .ui.header.white {
-        font-size: 23px;
-        line-height: 28px;
-        margin-bottom: 15px;
+    .home-container .ui.header.white {
+        display: none;
     }
 
     .body-container h3 {
       font-size: 12px;
       margin: 15px 0 0;
-    }
-
-    .body-container div.info {
-      font-size: 14px;
-      max-width: 250px;
-      display: block;
     }
 
     .body-container div span {
@@ -106,8 +105,40 @@
     }
 
     .body-container p.mission {
-      font-size: 16px;
-      max-width: 245px;
-      margin-bottom: 20px;
+      display: none;
+    }
+
+    .body-container p.quote {
+      font-size: 18px;
+      font-style: italic;
+      margin: 10px 0;
+    }
+
+    .quick-links {
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      flex-wrap: wrap;
+      height: 400px;
+    }
+
+    .quick-link {
+      width: 100%;
+      margin: 5px;
+      flex: 1 0 34%;
+    }
+
+    .quick-link i.big.icon {
+      font-size: 3.5em;
+    }
+
+    .home-image-mobile {
+      display: block;
+      background: url('../../resources/LogoWhite.svg') no-repeat 0 0;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      height: 90px;
+      width: 100%;
     }
 }

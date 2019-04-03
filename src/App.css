@@ -26,6 +26,12 @@ body {
     background-color: rgba(51,51,51,0.04);
 }
 
+.ui.vertical.menu .active.item {
+    color: #2185d0 !important;
+    font-weight: bold;
+    background-color: rgba(51,51,51,0.04);
+}
+
 .ui.inverted.menu .link.item.icon-image-link:hover, .ui.inverted.menu .active.item {
     background: transparent;
 }
@@ -123,11 +129,12 @@ body {
   .sidebar.icon {
     margin-left: 15px;
     font-size: 1.5em;
+    color: #111;
   }
 
   .home-link {
-    color: #111;
-    font-size: 14px;
+    color: #111 !important;
+    font-size: 8px;
     font-weight: 700;
   }
 
