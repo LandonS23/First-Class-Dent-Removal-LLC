@@ -43,6 +43,7 @@ class App extends Component {
         <div>
           {/* Menu desktop */}
           <div className="menu-desktop">
+            <div className="logo-thumb"/>
             <Menu fixed='top' inverted>
               <Container>
                 <Link to="/" className="home-link" onClick={e => this.handleItemClick(e, "home")}>

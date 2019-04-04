@@ -84,6 +84,11 @@ body {
   width: 120px;
 }
 
+.logo-thumb {
+  background: url('./resources/Logo.jpg') no-repeat 0 0;
+  display: none;
+}
+
 .menu-mobile {
   display: none;
 }
