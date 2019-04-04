@@ -50,6 +50,14 @@
   line-height: normal;
 }
 
+@media (max-width: 1200px) {
+  .faq-view .ui.text.container.body-container {
+    padding: 30px;
+    overflow: auto;
+    background-position: 50%;
+  }
+}
+
 @media (max-width: 767px) {
   .faq-view {
     padding-top: 0;

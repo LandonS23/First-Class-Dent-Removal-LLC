@@ -78,14 +78,71 @@
   display: none;
 }
 
+@media (max-width: 630px) {
+  .ui.text.container.body-container {
+    background: linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5) ), url('../../resources/car-wallpaper-mobile.jpg') no-repeat 0 0;
+    background-position: 0 -100px;
+  }
+}
+
+@media (max-width: 1200px) and (orientation: portrait) {
+  .ui.text.container.body-container {
+    background: linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5) ), url('../../resources/car-wallpaper-mobile.jpg') no-repeat -10px 0;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .quick-links {
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    height: 400px;
+  }
+
+  .quick-link {
+    width: 100%;
+    margin: 5px;
+    flex: 1 0 34%;
+  }
+
+  .quick-link i.big.icon {
+    font-size: 3.5em;
+  }
+
+  .home-image-mobile {
+    display: block;
+    background: url('../../resources/LogoWhite.svg') no-repeat 0 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 255px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) and (orientation: landscape) {
+  .quick-links {
+    width: 100%;
+  }
+
+  .home-container .ui.header.white {
+      display: block !important;
+  }
+}
+
 @media (max-width: 767px) {
     .ui.text.container.body-container {
       padding: 30px;
       justify-content: flex-start;
       height: calc(100vh - 50px) !important;
       margin: 0 !important;
-      background: linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5) ), url('../../resources/car-wallpaper-mobile.jpg') no-repeat 0 0;
-      background-position: 0 -100px;
+
+    }
+
+    .home-image-mobile {
+      height: 90px;
     }
 
     .home-container .ui.header.white {
@@ -112,33 +169,5 @@
       font-size: 18px;
       font-style: italic;
       margin: 10px 0;
-    }
-
-    .quick-links {
-      justify-content: space-around;
-      align-items: center;
-      width: 100%;
-      flex-wrap: wrap;
-      height: 400px;
-    }
-
-    .quick-link {
-      width: 100%;
-      margin: 5px;
-      flex: 1 0 34%;
-    }
-
-    .quick-link i.big.icon {
-      font-size: 3.5em;
-    }
-
-    .home-image-mobile {
-      display: block;
-      background: url('../../resources/LogoWhite.svg') no-repeat 0 0;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 100%;
-      height: 90px;
-      width: 100%;
     }
 }

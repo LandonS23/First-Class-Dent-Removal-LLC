@@ -43,7 +43,9 @@
     padding-top: 0;
     height: calc(100vh - 52px);
   }
+}
 
+@media (max-width: 1200px) {
   .gallery-view .ui.text.container.body-container {
     padding: 30px;
     background-position: 40%;
