@@ -38,6 +38,11 @@
   margin: 5px -.25rem 5px !important;
 }
 
+.gallery-carousel {
+  width: 80%;
+  margin-bottom: 15px;
+}
+
 @media (max-width: 767px) {
   .gallery-view {
     padding-top: 0;
@@ -57,5 +62,10 @@
 
   .gallery-view .ui.medium.images .image, .gallery-view .ui.medium.images img {
     width: auto;
+  }
+
+  .gallery-carousel {
+    width: 100%;
+    margin-bottom:
   }
 }
