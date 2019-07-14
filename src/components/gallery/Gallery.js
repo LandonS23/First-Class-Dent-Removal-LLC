@@ -29,7 +29,7 @@ class Gallery extends Component {
             <p className="gallery-sub">Before & After</p>
           </div>
 
-        <Carousel className="gallery-carousel"  centerMode={width > 700} centerSlidePercentage={50} emulateTouch showThumbs={false}>
+        <Carousel className="gallery-carousel" autoPlay centerMode={width > 700} centerSlidePercentage={50} emulateTouch showThumbs={false}>
               <div>
                   <img src={require('../../resources/before1.jpeg')} alt='before1' />
                   <p className="legend">Before</p>
