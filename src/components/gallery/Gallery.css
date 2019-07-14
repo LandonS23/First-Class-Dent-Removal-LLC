@@ -43,6 +43,10 @@
   margin-bottom: 15px;
 }
 
+.legend {
+  opacity: 1 !important;
+}
+
 @media (max-width: 767px) {
   .gallery-view {
     padding-top: 0;
