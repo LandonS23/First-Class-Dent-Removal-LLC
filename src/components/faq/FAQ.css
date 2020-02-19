@@ -61,7 +61,7 @@
 @media (max-width: 767px) {
   .faq-view {
     padding-top: 0;
-    height: calc(100vh - 52px);
+    height: calc(100vh - 50px);
   }
 
   .faq-view .ui.text.container.body-container {

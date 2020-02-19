@@ -43,8 +43,21 @@
   width: 50%;
 }
 
+.about-container-col-image {
+  height: 100%;
+  width: 25%;
+}
+
 .about-image {
   background: url('../../resources/zach-work.jpg') no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 2px;
+}
+
+.arc-image {
+  background: url('../../resources/arc.jpeg') no-repeat;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -59,10 +72,14 @@
 
 @media (max-width: 767px) and (orientation: portrait) {
   .about-view {
-    height: calc(100vh - 52px) !important;
+    height: calc(100vh - 50px) !important;
   }
 
   .about-image {
+    background-size: cover !important;
+  }
+  
+  .arc-image {
     background-size: cover !important;
   }
 }
@@ -89,8 +106,19 @@
     flex: 1 0 51%;
     height: auto;
   }
+  
+  .about-container-col-image {
+    margin: 5px 0;
+    flex: 1 0 51%;
+    height: auto;
+  }
 
   .about-image {
+    height: 225px;
+    background-size: contain;
+  }
+  
+  .arc-image {
     height: 225px;
     background-size: contain;
   }

@@ -39,6 +39,14 @@ class Gallery extends Component {
                   <p className="legend">After</p>
               </div>
               <div>
+                  <img src={require('../../resources/before7.jpeg')} alt='before7' />
+                  <p className="legend">Before</p>
+              </div>
+              <div>
+                  <img src={require('../../resources/fix7.jpeg')} alt='fix7' />
+                  <p className="legend">After</p>
+              </div>
+              <div>
                   <img src={require('../../resources/before2.jpeg')} alt='before2' />
                   <p className="legend">Before</p>
               </div>

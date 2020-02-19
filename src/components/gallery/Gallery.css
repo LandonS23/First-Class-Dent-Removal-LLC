@@ -6,6 +6,10 @@
   flex-direction: column;
 }
 
+.carousel .control-dots {
+  padding-left: 0;
+}
+
 ::-webkit-scrollbar {
     display: none;
 }
@@ -50,7 +54,7 @@
 @media (max-width: 767px) {
   .gallery-view {
     padding-top: 0;
-    height: calc(100vh - 52px);
+    height: calc(100vh - 50px);
   }
 }
 

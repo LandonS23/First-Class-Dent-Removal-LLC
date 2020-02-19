@@ -40,10 +40,21 @@
   margin: 0;
 }
 
+.home-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .body-container p.quote {
   font-size: 32px;
   font-style: italic;
   margin: 0;
+}
+
+.body-container p.detail {
+  font-size: 20px;
+  margin-top: 15px;
 }
 
 .header-text {
@@ -165,9 +176,22 @@
       display: none;
     }
 
+    .home-text-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     .body-container p.quote {
       font-size: 18px;
       font-style: italic;
-      margin: 10px 0;
+      margin-top: 10px;
+    }
+    
+    .body-container p.detail {
+      font-size: 16px;
+      margin-bottom: 10px;
+      width: 85%;
+      text-align: center;
     }
 }
