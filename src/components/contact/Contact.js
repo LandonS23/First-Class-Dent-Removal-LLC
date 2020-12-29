@@ -24,7 +24,7 @@ class Contact extends Component {
             <div className="contact-container-col contact-image" />
 
             <List className="contact-container-col">
-              <List.Item icon='phone' content={<a href='tel:1-405-353-2202'>(405) 353-2202</a>} />
+              <List.Item icon='phone' content={<a href='tel:1-405-996-6709'>(405) 996-6709</a>} />
               <List.Item
                 icon='mail'
                 content={<a href='mailto:firstclassdentremoval@gmail.com'>firstclassdentremoval@gmail.com</a>}
