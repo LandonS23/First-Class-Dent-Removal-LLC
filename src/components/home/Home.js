@@ -20,7 +20,11 @@ class Home extends Component {
 
           <div className="home-image-mobile" />
 
-          <p className="quote">"We Treat Your Vehicle Like First Class"</p>
+          <div className="home-text-container">
+            <p className="quote">"We Treat Your Vehicle Like First Class"</p>
+            
+            <p className="detail">Save time and money by choosing us over traditional repair methods</p>
+          </div>
 
           <div className="quick-links">
             <Link to="/contact" className="quick-link" onClick={e => this.props.handleItemClick(e, "contact")}>

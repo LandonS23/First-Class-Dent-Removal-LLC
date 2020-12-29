@@ -18,7 +18,8 @@ class About extends Component {
           </div>
 
           <div className="about-container">
-            <div className="about-container-col about-image" />
+            <div className="about-container-col-image arc-image" />
+            <div className="about-container-col-image about-image" />
 
             <div className="about-container-col">
               <p className="about-detail">

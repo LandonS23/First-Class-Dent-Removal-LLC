@@ -121,7 +121,7 @@
 @media (max-width: 767px) {
   .contact-view {
     padding-top: 0;
-    height: calc(100vh - 52px);
+    height: calc(100vh - 50px);
   }
 
   .contact-view .ui.text.container.body-container {
